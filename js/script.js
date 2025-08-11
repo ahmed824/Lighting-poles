@@ -66,6 +66,7 @@ const productsSwiper = new Swiper('.products-swiper', {
 const projectsSwiper = new Swiper('.projects-swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
+    slidesPerView: 1,
     autoplay: {
         delay: 4500,
         disableOnInteraction: false,
@@ -80,10 +81,10 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     },
     breakpoints: {
         768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
         },
         992: {
-            slidesPerView: 3,
+            slidesPerView: 1,
         }
     },
     loop: true,
@@ -554,5 +555,25 @@ document.querySelectorAll(".curve-svg").forEach(svg => {
                 ease: "power2.out"
             });
         });
+    }
+});
+
+//partnersSwiper
+const partnersSwiper = new Swiper('.partners-swiper', {
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 2,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    breakpoints: {
+        576: { slidesPerView: 3 },
+        768: { slidesPerView: 4 },
+        992: { slidesPerView: 4 }
     }
 });

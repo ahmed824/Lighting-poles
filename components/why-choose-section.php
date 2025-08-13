@@ -2,7 +2,7 @@
     <!-- Background LPC Text -->
     <div class="lpc-bg-text">LPC</div>
 
-    <div class="container d-flex flex-column items-start">
+    <div class="container d-flex flex-column items-start animate-on-scroll">
         <div class="section-subtitle">Why To Choose Us ?</div>
         <h2 class="section-title">Building Success Together</h2>
 
@@ -11,21 +11,23 @@
         <div class="content-grid">
             <!-- Left Content -->
             <div class="left-content">
-                <div class="m-auto d-flex justify-content-center my-4">
-                    <svg class="curve-svg" width="250" height="45" viewBox="0 0 237 45" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path class="curve-path"
-                            d="M0 10.179C106.684 -16.3016 324.837 13.7237 199.017 45C287.522 14.5577 88.0266 -9.83778 0 10.179Z"
-                            fill="#3AB4FF" />
-                    </svg>
+                <div class="d-flex flex-column align-items-start">
+                    <div class="mx-lg-auto ml-0 mr-auto d-flex justify-content-center my-4 animate-on-scroll">
+                        <svg class="curve-svg" width="250" height="45" viewBox="0 0 237 45" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="curve-path"
+                                d="M0 10.179C106.684 -16.3016 324.837 13.7237 199.017 45C287.522 14.5577 88.0266 -9.83778 0 10.179Z"
+                                fill="#3AB4FF" />
+                        </svg>
 
+                    </div>
+                    <p class="section-description animate-on-scroll">
+                        Lighting Poles Company Is Committed To Adhering To The Highest Possible Quality Standards In
+                        Collaboration With Lighting Designers And Engineers, Executing Its Work Through Several Phases
+                        And Steps
+                    </p>
                 </div>
-                <p class="section-description">
-                    Lighting Poles Company Is Committed To Adhering To The Highest Possible Quality Standards In
-                    Collaboration With Lighting Designers And Engineers, Executing Its Work Through Several Phases
-                    And Steps
-                </p>
-                <a href="#contact" class="contact-btn">
+                <a href="#contact" class="contact-btn animate-on-scroll">
                     Contact Us
                 </a>
             </div>
@@ -33,9 +35,9 @@
             <!-- Right Content -->
             <div class="right-content animate-on-scroll">
                 <!-- Main Image -->
-                <div class="about-right-container ">
+                <div class="about-right-container animate-on-scroll ">
                     <div class="about-image-container">
-                        <img src="assets/images/about-image.png" alt="Lighting Poles" class="why-choose-img   ">
+                        <img src="assets/images/rectangle.png" alt="Lighting Poles" class="why-choose-img   ">
                     </div>
 
                     <!-- Custom Wave Shape -->
@@ -49,8 +51,8 @@
                     </svg>
                 </div>
                 <!-- Solutions Box -->
-                <div class="solutions-box">
-                    <h3 class="solutions-title">Solutions For All Your Needs</h3>
+                <div class="solutions-box animate-on-scroll">
+                    <h3 class="solutions-title">Explosion proof lighting</h3>
                     <p class="solutions-text">
                         Lighting Poles Company Offers A Wide Range Of Lighting And Decorative Poles That Meet The
                         Standards And Requirements Of The Saudi And Gulf Markets. Leveraging Extensive Experience In

@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Button</title>
     <style>
-     
-
         .whatsapp-btn {
             width: 90px;
             height: 90px;
@@ -42,6 +40,35 @@
             height: 100%;
             fill: white;
         }
+
+        /* 📱 Small devices */
+        @media (max-width: 576px) {
+            .whatsapp-btn {
+                width: 60px;
+                height: 60px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .inner-ring {
+                border-width: 1.5px;
+            }
+
+            .whatsapp-icon {
+                width: 50%;
+                height: 50%;
+            }
+        }
+
+        /* 💻 Large screens */
+        @media (min-width: 1400px) {
+            .whatsapp-btn {
+                width: 110px;
+                height: 110px;
+                bottom: 30px;
+                right: 30px;
+            }
+        }
     </style>
 </head>
 
@@ -62,7 +89,7 @@
             </svg>
         </div>
     </a>
- 
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             gsap.registerPlugin(ScrollTrigger);

@@ -1,8 +1,9 @@
 <!-- Products Section -->
 <section id="products" class="products-section">
     <div class="decoration-title">
-        our products
+        <span class="shiny-text" data-text="our products">our products</span>
     </div>
+
     <div class="decoration-img">
         <img src="assets/images/correct-img.png" alt="correct image">
     </div>
@@ -14,7 +15,7 @@
         <div class="swiper products-swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="product-card">
+                    <div class="product-card animate-on-scroll">
                         <img src="assets/images/product1.png" alt="Lighting Poles">
                         <div class="product-card-content">
                             <h5>Lighting Poles</h5>
@@ -26,7 +27,7 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="product-card">
+                    <div class="product-card animate-on-scroll">
                         <img src="assets/images/product2.png" alt="LED Industrial Lighting">
                         <div class="product-card-content">
                             <h5>LED Industrial Lighting</h5>
@@ -38,7 +39,7 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="product-card">
+                    <div class="product-card animate-on-scroll">
                         <img src="assets/images/product3.png" alt="LED Landscape Lighting">
                         <div class="product-card-content">
                             <h5>LED Landscape Lighting</h5>
@@ -49,7 +50,7 @@
                 </div>
 
                 <div class="swiper-slide">
-                    <div class="product-card">
+                    <div class="product-card animate-on-scroll">
                         <img src="assets/images/product2.png" alt="LED Decorative Street Lighting">
                         <div class="product-card-content">
                             <h5>LED Decorative Street Lighting</h5>

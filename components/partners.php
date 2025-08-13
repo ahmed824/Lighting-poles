@@ -6,7 +6,7 @@
 
     <div class="container">
         <div class="swiper partners-swiper mt-4">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper animate-on-scroll">
 
                 <!-- Partner Item -->
                 <div class="swiper-slide partner-container">

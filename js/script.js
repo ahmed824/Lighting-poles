@@ -1,3 +1,34 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.getElementById('page-loader');
+
+    // Minimum loading time (to show the animation)
+    const minLoadTime = 2000; // 2 seconds
+    const startTime = Date.now();
+
+    // Function to hide loader
+    function hideLoader() {
+        const elapsedTime = Date.now() - startTime;
+        const remainingTime = Math.max(0, minLoadTime - elapsedTime);
+
+        setTimeout(() => {
+            if (loader) {
+                loader.classList.add('fade-out');
+                document.body.classList.add('loaded');
+
+                // Remove loader from DOM after animation completes
+                setTimeout(() => {
+                    loader.remove();
+                }, 400);
+            }
+        }, remainingTime);
+    }
+
+    // Hide loader when everything is loaded
+    window.addEventListener('load', hideLoader);
+
+    // Fallback: hide loader after maximum time
+    setTimeout(hideLoader, 8000); // 8 seconds max
+});
 // Initialize GSAP
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,23 +45,25 @@ window.addEventListener('scroll', function () {
 // Hero Swiper
 const heroSwiper = new Swiper('.hero-swiper', {
     effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+    fadeEffect: { crossFade: true },
+    autoplay: { delay: 5000, disableOnInteraction: false },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
     loop: true,
+
+    on: {
+        slideChangeTransitionStart: function () {
+            document.querySelectorAll('.hero-slide').forEach(slide => {
+                slide.classList.remove('zoom');
+            });
+            const activeSlide = this.slides[this.activeIndex];
+            activeSlide.classList.add('zoom');
+        }
+    }
 });
+
 
 // Products Swiper
 const productsSwiper = new Swiper('.products-swiper', {
@@ -65,7 +98,7 @@ const productsSwiper = new Swiper('.products-swiper', {
 // Projects Swiper
 const projectsSwiper = new Swiper('.projects-swiper', {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 24,
     slidesPerView: 1,
     autoplay: {
         delay: 4500,
@@ -82,9 +115,15 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     breakpoints: {
         768: {
             slidesPerView: 1,
+            spaceBetween: 12,
         },
         992: {
             slidesPerView: 1,
+            spaceBetween: 16,
+        },
+        1222: {
+            slidesPerView: 1,
+            spaceBetween: 28,
         }
     },
     loop: true,
@@ -577,3 +616,24 @@ const partnersSwiper = new Swiper('.partners-swiper', {
         992: { slidesPerView: 4 }
     }
 });
+const sideMenu = document.getElementById('side-menu');
+const overlay = document.getElementById('overlay');
+
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    sideMenu.classList.add('active');
+    overlay.classList.add('active');
+});
+
+document.getElementById('close-menu').addEventListener('click', closeMenu);
+overlay.addEventListener('click', closeMenu);
+
+// Close on link click
+document.querySelectorAll('.side-nav a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
+function closeMenu() {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+}
+

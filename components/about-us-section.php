@@ -3,20 +3,20 @@
     <div class="container">
         <div class="row g-4 align-items-center">
             <!-- Left Column: Text Content -->
-            <div class="col-lg-8">
+            <div class="col-md-12 col-lg-7">
                 <div class="section-title animate-on-scroll">
                     <h2>About Us:</h2>
                     <h3>What Makes Lighting Poles Stand Out?</h3>
 
-                    <div class="m-auto d-flex justify-content-end my-4">
+                    <div class="d-flex justify-content-md-start justify-content-end my-4 mx-auto">
                         <svg class="curve-svg" width="250" height="45" viewBox="0 0 237 45" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path class="curve-path"
                                 d="M0 10.179C106.684 -16.3016 324.837 13.7237 199.017 45C287.522 14.5577 88.0266 -9.83778 0 10.179Z"
                                 fill="#3AB4FF" />
                         </svg>
-
                     </div>
+
 
                     <p>Lighting Poles Company, A Leading Saudi Manufacturer, Supplier, And Exporter Of Lighting And
                         Decorative Poles. Our Commitment Is To Deliver Exceptional Products That Meet Global Quality
@@ -67,7 +67,7 @@
             </div>
 
             <!-- Right Column: Image -->
-            <div class="col-lg-4">
+            <div class="col-lg-4 d-none d-lg-block">
                 <div class="about-right-container animate-on-scroll">
                     <div class="about-image-container">
                         <img src="assets/images/about-image.png" alt="Lighting Poles" class="   ">

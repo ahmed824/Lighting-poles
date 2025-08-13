@@ -23,27 +23,31 @@
 </head>
 
 <body>
-  <?php include 'components/nav.php'; ?>
+  <!-- Page Loader (Always first) -->
+  <?php include 'components/loader.php'; ?>
 
-  <?php include 'components/hero.php'; ?>
+  <!-- Main Content Wrapper -->
+  <div class="main-content">
+    <?php include 'components/nav.php'; ?>
 
-  <?php include 'components/whatsapp-btn.php'; ?>
+    <?php include 'components/hero.php'; ?>
 
-  <?php include 'components/about-us-section.php'; ?>
+    <?php include 'components/whatsapp-btn.php'; ?>
 
-  <?php include 'components/products-section.php'; ?>
+    <?php include 'components/about-us-section.php'; ?>
 
-  <?php include 'components/projects-section.php' ?>
+    <?php include 'components/products-section.php'; ?>
 
-  <?php include 'components/why-choose-section.php' ?>
+    <?php include 'components/projects-section.php' ?>
 
-  <?php include 'components/join-us-section.php' ?>
+    <?php include 'components/why-choose-section.php' ?>
 
-  <?php include 'components/partners.php' ?>
+    <?php include 'components/join-us-section.php' ?>
 
+    <?php include 'components/partners.php' ?>
 
-  <?php include 'components/footer.php' ?>
-
+    <?php include 'components/footer.php' ?>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

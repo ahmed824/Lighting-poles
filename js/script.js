@@ -637,3 +637,33 @@ function closeMenu() {
     overlay.classList.remove('active');
 }
 
+const langBtn = document.getElementById("lang-btn");
+const langText = document.getElementById("lang-text");
+// const arabicStyle = document.getElementById("arabic-style");
+
+// Load saved language from localStorage
+let currentLang = localStorage.getItem("lang") || "en";
+
+function applyLanguage(lang) {
+    // if (lang === "ar") {
+    //     arabicStyle.href = "styles/arabic.css";
+    //     document.body.setAttribute("dir", "rtl");
+    //     langText.textContent = "English";
+    // } else {
+    //     arabicStyle.href = "";
+    //     document.body.setAttribute("dir", "ltr");
+    //     langText.textContent = "Arabic";
+    // }
+    langText.textContent = lang === "en" ? "Arabic" : "English";
+}
+
+// Apply on page load
+applyLanguage(currentLang);
+
+// On button click → save & reload
+langBtn.addEventListener("click", () => {
+    currentLang = currentLang === "en" ? "ar" : "en";
+    localStorage.setItem("lang", currentLang);
+    // location.reload();  
+    applyLanguage(currentLang);
+});

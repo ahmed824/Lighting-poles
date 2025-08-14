@@ -19,7 +19,11 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
+  <!-- Always load main.css -->
   <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Arabic CSS will be added dynamically here -->
+  <link id="arabic-style" rel="stylesheet" href="" disabled>
 </head>
 
 <body>

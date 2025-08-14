@@ -1895,7 +1895,7 @@ textarea.input-field {
   }
 
   .single-glass-card {
-    padding: 12px;
+    padding: 0 !important;
     bottom: 38px;
   }
 

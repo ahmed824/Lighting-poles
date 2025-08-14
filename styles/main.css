@@ -642,6 +642,12 @@ span.swiper-pagination-bullet {
 
 }
 
+@media (max-width: 500px) {
+  /* .products-swiper .swiper-slide {
+    width: 100% !important;
+  } */
+}
+
 /* Projects Section */
 .projects-section {
   overflow: hidden;

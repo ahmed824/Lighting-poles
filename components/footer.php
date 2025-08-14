@@ -14,10 +14,22 @@
 
                 <!-- Social Icons -->
                 <div class="social-links">
-                    <a class="social-icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="#"><i class="fab fa-x-twitter fa-lg"></i></a>
+                    <a class="social-icon" href="https://www.facebook.com/YourPage" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a class="social-icon" href="https://www.linkedin.com/in/YourProfile" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a class="social-icon" href="https://twitter.com/YourHandle" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter / X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
                 </div>
+
                 <!-- Contact Info -->
                 <div class="contact-info">
                     <p><a href="tel:009666553201546">009666553201546</a></p>

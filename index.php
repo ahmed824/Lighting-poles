@@ -40,21 +40,25 @@
 
     <?php include 'components/hero.php'; ?>
 
-    <?php include 'components/whatsapp-btn.php'; ?>
-
+    
     <?php include 'components/about-us-section.php'; ?>
-
+    
     <?php include 'components/products-section.php'; ?>
-
+    
     <?php include 'components/projects-section.php' ?>
-
+    
     <?php include 'components/why-choose-section.php' ?>
-
+    
     <?php include 'components/join-us-section.php' ?>
-
+    
     <?php include 'components/partners.php' ?>
-
+    
     <?php include 'components/footer.php' ?>
+
+
+    <?php include 'components/back-to-top.php'; ?>
+    <?php include 'components/whatsapp-btn.php'; ?>
+    
   </div>
 
   <!-- Scripts -->

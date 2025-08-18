@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const navbar = document.getElementById('navbar');
         const currentScrollY = window.scrollY;
 
-        // Add/remove scrolled class
-        navbar.classList.toggle('scrolled', currentScrollY > 50);
+        // Add/remove scrolled class only when not at the very top
+        navbar.classList.toggle('scrolled', currentScrollY > 0); // Changed from 50 to 0
 
         // Hide/show navbar on scroll
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            gsap.to(navbar, { y: -80, duration: 0.3 });
+            gsap.to(navbar, { y: -110, duration: 0.3 });
         } else {
             gsap.to(navbar, { y: 0, duration: 0.3 });
         }

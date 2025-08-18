@@ -9,7 +9,8 @@
         .whatsapp-btn {
             width: 90px;
             height: 90px;
-            background-color: var(--primary-color);
+            background-color: #25D366;
+            /* WhatsApp green */
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -22,10 +23,11 @@
             text-decoration: none;
         }
 
+
         .inner-ring {
             position: absolute;
-            width: 85%;
-            height: 85%;
+            width: 75%;
+            height: 75%;
             border: 2px solid white;
             border-radius: 50%;
         }
@@ -112,9 +114,33 @@
 
             // Hover animation
             btn.addEventListener('mouseenter', () => {
-                gsap.to(btn, { scale: 1.08, boxShadow: '0 8px 20px rgba(49,36,201,0.5)', duration: 0.4, ease: "power2.out" });
-                gsap.to(ring, { scale: 1.1, duration: 0.4, ease: "power2.out" });
+                gsap.to(btn, {
+                    scale: 1.08,
+                    boxShadow: '0 8px 20px rgba(37, 211, 102, 0.5)', // WhatsApp green shadow
+                    duration: 0.4,
+                    ease: "power2.out"
+                });
+                gsap.to(ring, {
+                    scale: 1.05,
+                    duration: 0.4,
+                    ease: "power2.out"
+                });
             });
+
+            btn.addEventListener('mouseleave', () => {
+                gsap.to(btn, {
+                    scale: 1,
+                    boxShadow: '0 4px 10px rgba(0,0,0,0.2)', // reset shadow
+                    duration: 0.4,
+                    ease: "power2.inOut"
+                });
+                gsap.to(ring, {
+                    scale: 1,
+                    duration: 0.4,
+                    ease: "power2.inOut"
+                });
+            });
+
 
             btn.addEventListener('mouseleave', () => {
                 gsap.to(btn, { scale: 1, boxShadow: '0 0px 0px rgba(0,0,0,0)', duration: 0.4, ease: "power2.out" });

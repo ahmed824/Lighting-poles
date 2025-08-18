@@ -1,7 +1,7 @@
 <!-- Products Section -->
 <section id="products" class="products-section">
     <div class="decoration-title">
-        <span class="shiny-text" data-text="our products">our products</span>
+        <span class="shiny-text" data-text="Our Products">our products</span>
     </div>
 
     <div class="decoration-img">

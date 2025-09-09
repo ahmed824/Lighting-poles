@@ -32,17 +32,20 @@
 
                 <!-- Contact Info -->
                 <div class="contact-info">
-                    <p><a href="tel:009666553201546">009666553201546</a></p>
-                    <p><a href="mailto:Sales1@Lpc.Com.Sa">Sales1@Lpc.Com.Sa</a></p>
+                    <p><a href="tel:+966138937127">+966 13 893 7127</a></p>
+                    <p><a href="mailto:Sales1@Lpc.Com.Sa">Sales@lpc.com.sa</a></p>
                 </div>
 
 
                 <!-- Google Map -->
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.125911863187!2d46.67529521500278!3d24.7135519841244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f038f7195b4c9%3A0xf2e1f54d074e508c!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1691664700100!5m2!1sen!2ssa"
-                    width="100%" height="200" allowfullscreen loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2287.312586882812!2d50.09419557682438!3d26.42093718328885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49fc9c93ada553%3A0xb73c3e920c08b10e!2sSaud%20Business%20Center%20%D9%85%D8%B1%D9%83%D8%B2%20%D8%B3%D8%B9%D9%88%D8%AF%20%D9%84%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84!5e0!3m2!1sen!2ssa!4v1725883480000!5m2!1sen!2ssa"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+
+
+
             </div>
 
             <!-- Right Side -->

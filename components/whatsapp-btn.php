@@ -76,7 +76,7 @@
 
 <body>
 
-    <a href="https://wa.me/919826000000" class="whatsapp-btn">
+    <a href="https://wa.me/00966593778994" class="whatsapp-btn">
         <div class="inner-ring"></div>
         <div class="whatsapp-icon">
             <!-- WhatsApp SVG -->

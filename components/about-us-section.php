@@ -6,7 +6,7 @@
             <div class="col-md-12 col-lg-7">
                 <div class="section-title animate-on-scroll">
                     <h2>About Us:</h2>
-                    <h3>What Makes Lighting Poles Stand Out?</h3>
+                    <h3>What Makes LPC Stand Out?</h3>
 
                     <div class="d-flex justify-content-md-start justify-content-end my-4 mx-auto">
                         <svg class="curve-svg" width="250" height="45" viewBox="0 0 237 45" fill="none"

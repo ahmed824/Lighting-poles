@@ -6,11 +6,9 @@
   --dark-bg: #0f172a;
   --text-light: #f8fafc;
   --text-dark: #1e293b;
-  --gradient: linear-gradient(
-    135deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
-  );
+  --gradient: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
   --card-shadow: 0 20px 40px rgba(48, 36, 174, 0.15);
 }
 
@@ -36,11 +34,9 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    135deg,
-    var(--secondary-color) 0%,
-    var(--accent-color) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--secondary-color) 0%,
+      var(--accent-color) 100%);
   transform: scale(1.1);
 }
 
@@ -94,15 +90,21 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
-  background: transparent; /* Fully transparent when at top */
-  backdrop-filter: none; /* Remove blur when transparent */
-  -webkit-backdrop-filter: none; /* Remove blur for Safari */
+  background: transparent;
+  /* Fully transparent when at top */
+  backdrop-filter: none;
+  /* Remove blur when transparent */
+  -webkit-backdrop-filter: none;
+  /* Remove blur for Safari */
 }
 
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.3); /* Semi-transparent when scrolled */
-  backdrop-filter: blur(12px); /* Apply blur when scrolled */
-  -webkit-backdrop-filter: blur(12px); /* Apply blur for Safari */
+  background: rgba(0, 0, 0, 0.3);
+  /* Semi-transparent when scrolled */
+  backdrop-filter: blur(12px);
+  /* Apply blur when scrolled */
+  -webkit-backdrop-filter: blur(12px);
+  /* Apply blur for Safari */
 }
 
 .navbar-brand .logo {
@@ -139,20 +141,44 @@ body {
 
 /* Button */
 .btn-primary-custom {
-  background: var(--primary-color);
+  background: radial-gradient(ellipse at bottom,
+      var(--primary-color) 0%,
+      rgba(11, 21, 30, 1) 45%);
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 50px;
   font-weight: 600;
-  color: white;
-  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.66);
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
   text-decoration: none;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary-custom::before {
+  content: "";
+  width: 70%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  opacity: 0.2;
+  transition: all 1s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
 .btn-primary-custom:hover {
-  transform: translateY(-2px);
+  transform: scale(1.1) translateY(-3px);
   box-shadow: 0 10px 30px rgba(48, 36, 174, 0.4);
-  color: white;
+  color: rgba(255, 255, 255, 1);
+}
+
+.btn-primary-custom:hover::before {
+  opacity: 1;
 }
 
 /* Side Menu */
@@ -427,8 +453,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
 
 /* Products Section */
 .products-section {
@@ -466,19 +491,22 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .product-card-content {
   position: absolute;
-  bottom: -400px;
+  top: 0;
   height: 100%;
   left: 0;
   width: 100%;
   padding: 1.5rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 40%, transparent 100%);
   color: var(--text-light);
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  pointer-events: none !important;
 }
 
 .product-card-content h5 {
@@ -488,6 +516,7 @@ body {
   color: #fff;
   margin-bottom: 0.5rem;
   text-align: center;
+  margin-top: auto;
 }
 
 .product-card-content p {
@@ -507,12 +536,16 @@ body {
 }
 
 .product-card:hover .product-card-content {
-  bottom: 0px;
-  transform: translateY(32%);
+  /* bottom: 0px; */
+  transform: translateY(0%);
 }
 
 .product-card:hover .product-card-content p {
   opacity: 1;
+}
+
+.products-swiper {
+  overflow: visible !important;
 }
 
 .products-swiper .swiper-wrapper {
@@ -552,19 +585,17 @@ body {
   left: 0;
   width: 100%;
   line-height: 1.1;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 0.713) 50%,
-    rgba(255, 255, 255, 0) 60%
-  );
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0.713) 50%,
+      rgba(255, 255, 255, 0) 60%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: shine 5s linear infinite;
   pointer-events: none;
-  text-decoration: ;
+  /* text-decoration: ; */
 }
 
 @keyframes shine {
@@ -634,6 +665,7 @@ span.swiper-pagination-bullet {
 }
 
 @media (max-width: 768px) {
+
   .products-section .swiper-button-next,
   .products-section .swiper-button-prev {
     width: 40px;
@@ -694,6 +726,21 @@ span.swiper-pagination-bullet {
   display: block;
 }
 
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(19, 30, 55, 0.2) 0%,   /* بداية فاتحة بلمسة من dark-bg */
+    rgba(24, 38, 70, 0.55) 70%, /* تدريج متوسط */
+    rgba(15, 23, 42, 0.85) 100% /* الأسفل غامق أكثر */
+  );
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+
+
 .swiper-slide-next .project-card,
 .swiper-slide-prev .project-card {
   opacity: 0.8;
@@ -704,11 +751,9 @@ span.swiper-pagination-bullet {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.94) 0%,
-    rgba(173, 173, 173, 0.83) 100%
-  );
+  background: linear-gradient(45deg,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(173, 173, 173, 0.83) 100%);
   transition: background 0.3s ease;
   z-index: 1;
 }
@@ -731,8 +776,7 @@ span.swiper-pagination-bullet {
   /* Doped with a subtle black tint for a cooler, more mysterious depth while maintaining transparency */
   backdrop-filter: blur(20px) saturate(120%) brightness(110%) contrast(105%);
   /* Enhanced with slight contrast boost for sharper modern edges */
-  -webkit-backdrop-filter: blur(20px) saturate(120%) brightness(110%)
-    contrast(105%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%) brightness(110%) contrast(105%);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
@@ -748,13 +792,14 @@ span.swiper-pagination-bullet {
   font-size: clamp(1.25rem, 2vw, 2rem);
   line-height: 1.5;
   text-transform: capitalize;
-  margin-bottom: 26px;
+  /*margin-bottom: 26px;*/
 }
 
 .project-content p {
   font-weight: 400;
   font-size: clamp(0.75rem, 1.2vw, 0.875rem);
   text-transform: capitalize;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -822,6 +867,7 @@ span.swiper-pagination-bullet {
 }
 
 @media (max-width: 1024px) {
+
   .projects-section .swiper-button-next,
   .projects-section .swiper-button-prev {
     width: 40px;
@@ -839,6 +885,7 @@ span.swiper-pagination-bullet {
 }
 
 @media (max-width: 450px) {
+
   .projects-section .swiper-button-next,
   .projects-section .swiper-button-prev {
     display: none;
@@ -1167,7 +1214,7 @@ span.swiper-pagination-bullet {
   color: transparent;
 }
 
-.form__field:placeholder-shown ~ .form__label {
+.form__field:placeholder-shown~.form__label {
   font-size: 17px;
   cursor: text;
   top: 20px;
@@ -1198,7 +1245,7 @@ span.swiper-pagination-bullet {
   color: #000;
 }
 
-.form__field:focus ~ .form__label {
+.form__field:focus~.form__label {
   position: absolute;
   top: -10px;
   display: block;
@@ -1229,8 +1276,7 @@ span.swiper-pagination-bullet {
   background: #fff;
   color: #000;
   border-radius: 50px;
-  padding: clamp(8px, 1.2vw, 12px) clamp(16px, 2vw, 22px)
-    clamp(8px, 1.2vw, 12px) clamp(14px, 1.8vw, 20px);
+  padding: clamp(8px, 1.2vw, 12px) clamp(16px, 2vw, 22px) clamp(8px, 1.2vw, 12px) clamp(14px, 1.8vw, 20px);
   min-width: clamp(140px, 18vw, 180px);
   font-weight: 800;
   font-size: clamp(14px, 1.5vw, 18px);
@@ -1393,20 +1439,17 @@ span.swiper-pagination-bullet {
   padding: 50px;
   border-radius: 12px;
   border: 1px solid rgba(58, 180, 255, 0.4);
-  background: radial-gradient(
-      circle at 100px calc(100% - 100px),
+  background: radial-gradient(circle at 100px calc(100% - 100px),
       rgba(47, 36, 174, 0.53) 0%,
       rgba(48, 36, 174, 0.4) 10%,
-      rgb(0 0 0 / 31%) 25%
-    ),
+      rgb(0 0 0 / 31%) 25%),
     rgba(0, 0, 0, 0.15);
   background-repeat: no-repeat;
   background-size: cover;
 
   /* Glassmorphism blur */
   backdrop-filter: blur(20px) saturate(120%) brightness(110%) contrast(105%);
-  -webkit-backdrop-filter: blur(20px) saturate(120%) brightness(110%)
-    contrast(105%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%) brightness(110%) contrast(105%);
 
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }
@@ -1448,14 +1491,14 @@ span.swiper-pagination-bullet {
   transition: all 0.3s ease;
 }
 
-.input-field:focus + .input-label,
-.input-field:not(:placeholder-shown) + .input-label {
+.input-field:focus+.input-label,
+.input-field:not(:placeholder-shown)+.input-label {
   top: -15px;
   font-size: 12px;
   color: #ffffff;
 }
 
-.input-field:focus + .input-label + .input-highlight {
+.input-field:focus+.input-label+.input-highlight {
   width: 100%;
 }
 
@@ -1488,8 +1531,7 @@ textarea.input-field {
   border-radius: 12px;
   border: 0;
   height: 218px;
-  filter: sepia(25%) saturate(600%) hue-rotate(180deg) brightness(65%)
-    contrast(190%);
+  filter: sepia(25%) saturate(600%) hue-rotate(180deg) brightness(65%) contrast(190%);
 }
 
 .footer-left,
@@ -1692,6 +1734,7 @@ textarea.input-field {
   .hero-content p {
     font-size: 1.1rem;
   }
+
   .contact-form {
     padding: 18px 20px;
   }
@@ -1756,6 +1799,7 @@ textarea.input-field {
   color: var(--text-light, #f8fafc);
   max-width: 1200px;
   margin: 0 auto;
+  display: none;
 }
 
 .single-glass-card::before {
@@ -1765,12 +1809,10 @@ textarea.input-field {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
   transition: all 0.6s;
 }
 

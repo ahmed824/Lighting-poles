@@ -80,7 +80,7 @@ function initializeSwipers() {
 
     // Products Swiper
     const productsSwiper = new Swiper('.products-swiper', {
-        slidesPerView: 1,
+        slidesPerView: 3,
         spaceBetween: 30,
         autoplay: { delay: 4000, disableOnInteraction: false },
         pagination: { el: '.products-bullets', clickable: true },
@@ -92,10 +92,16 @@ function initializeSwipers() {
             480: { slidesPerView: 2 },
             768: { slidesPerView: 2 },
             992: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 },
+            1200: { slidesPerView: 3 },
         },
         loop: true,
         speed: 800,
+        // 👇 تمكين السحب بالماوس والإيد
+        grabCursor: true,           // يخلي شكل الكرسر "يد" وقت السحب
+        simulateTouch: true,        // يفعّل السحب بالماوس
+        touchEventsTarget: 'container',
+        resistance: true,           // يخلي في إحساس مقاومة
+        resistanceRatio: 0.85,
     });
 
     // Projects Swiper

@@ -260,7 +260,7 @@
                 <!-- Product 25 -->
                 <div class="swiper-slide">
                     <div class="product-card animate-on-scroll">
-                        <img src="assets/images/products/product29.png" alt="Explosion proof lighting">
+                        <img src="assets/images/products/product29.jpg" alt="Explosion proof lighting">
                         <div class="product-card-content">
                             <h5>Explosion proof lighting</h5>
                         </div>

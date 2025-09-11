@@ -80,7 +80,7 @@ function initializeSwipers() {
 
     // Products Swiper
     const productsSwiper = new Swiper('.products-swiper', {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 30,
         autoplay: { delay: 4000, disableOnInteraction: false },
         pagination: { el: '.products-bullets', clickable: true },
